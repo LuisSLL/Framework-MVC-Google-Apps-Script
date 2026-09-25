@@ -1,0 +1,81 @@
+<!-- HERO -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 pt-16 pb-14 text-center">
+  <span class="inline-flex items-center gap-2 rounded-full border border-brand-200 dark:border-brand-800 bg-brand-50 dark:bg-brand-900/30 px-3 py-1 text-xs font-medium text-brand-700 dark:text-brand-300">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3 1.9 4.5L18 9l-4.1 1.5L12 15l-1.9-4.5L6 9l4.1-1.5Z"/><path d="M19 15l.8 1.9L22 18l-2.2.9L19 21l-.8-2.1L16 18l2.2-1.1Z"/></svg>
+    Framework MVC listo para usar
+  </span>
+
+  <h1 class="mt-6 font-display text-4xl sm:text-5xl font-bold tracking-tight text-slate-900 dark:text-white">
+    ¡Bienvenido a <span class="text-brand-600 dark:text-brand-400"><?= appName ?></span>!
+  </h1>
+
+  <p class="mt-4 max-w-xl mx-auto text-base sm:text-lg text-slate-500 dark:text-slate-400">
+    <?= appTagline ?>. Este es el punto de partida de tu proyecto: un esqueleto
+    MVC en POO, con Router, modelos sobre Google Sheets y vistas con Tailwind CSS.
+  </p>
+
+  <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+    <a href="<?= scriptUrl ?>" class="inline-flex items-center gap-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium px-5 py-2.5 text-sm shadow-md shadow-brand-500/30 transition-colors">
+      Empezar a construir
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+    <a href="https://developers.google.com/apps-script" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 font-medium px-5 py-2.5 text-sm text-slate-700 dark:text-slate-200 transition-colors">
+      Ver documentación de Apps Script
+    </a>
+  </div>
+</section>
+
+<!-- ESTRUCTURA DEL FRAMEWORK -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 pb-20">
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+      <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 mb-3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v4H4zM4 12h16v8H4z"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-slate-900 dark:text-white">Base_Controller</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Clase base para todos tus controladores: renderizado de vistas, redirecciones y respuestas JSON.</p>
+    </div>
+
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+      <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 mb-3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-slate-900 dark:text-white">Base_Model</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">CRUD genérico sobre Google Sheets: <code class="text-xs">all, create, update, delete, find</code>.</p>
+    </div>
+
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+      <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 mb-3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="9"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-slate-900 dark:text-white">Router &amp; Routes</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Rutas con nombre (<code class="text-xs">?p=...</code>) y parámetros dinámicos, mapeadas a <code class="text-xs">Controlador@metodo</code>.</p>
+    </div>
+
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+      <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 mb-3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-slate-900 dark:text-white">Engine_View</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Motor de vistas con layouts: renderiza un <code class="text-xs">View_*</code> y lo inyecta dentro de <code class="text-xs">Layout_Main</code>.</p>
+    </div>
+
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+      <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 mb-3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5ZM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-slate-900 dark:text-white">Tailwind CSS</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Estilos utilitarios vía CDN, con soporte de modo oscuro listo para usar.</p>
+    </div>
+
+    <div class="rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-5 hover:border-brand-300 dark:hover:border-brand-700 transition-colors">
+      <div class="flex h-10 w-10 items-center justify-center rounded-lg bg-brand-50 dark:bg-brand-900/40 text-brand-600 dark:text-brand-400 mb-3">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20Z"/></svg>
+      </div>
+      <h3 class="font-display font-semibold text-slate-900 dark:text-white">Helpers &amp; Main</h3>
+      <p class="mt-1 text-sm text-slate-500 dark:text-slate-400"><code class="text-xs">WebApp.url()</code>, formateo de datos, tema claro/oscuro y el punto de entrada <code class="text-xs">doGet/doPost</code>.</p>
+    </div>
+
+  </div>
+</section>
